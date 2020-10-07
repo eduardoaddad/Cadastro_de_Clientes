@@ -37,7 +37,7 @@ public class UICadastroCliente extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         Txtestado = new javax.swing.JTextField();
         botaodesalvar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        botaodelimpar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         Txtcpf = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
@@ -84,7 +84,12 @@ public class UICadastroCliente extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Limpar");
+        botaodelimpar.setText("Limpar");
+        botaodelimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaodelimparActionPerformed(evt);
+            }
+        });
 
         jLabel9.setText("Cidade");
 
@@ -115,7 +120,7 @@ public class UICadastroCliente extends javax.swing.JFrame {
                 .add(57, 57, 57)
                 .add(botaodesalvar)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 109, Short.MAX_VALUE)
-                .add(jButton2)
+                .add(botaodelimpar)
                 .add(81, 81, 81))
         );
         jPanel2Layout.setVerticalGroup(
@@ -145,7 +150,7 @@ public class UICadastroCliente extends javax.swing.JFrame {
                 .add(42, 42, 42)
                 .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(botaodesalvar)
-                    .add(jButton2))
+                    .add(botaodelimpar))
                 .add(0, 0, Short.MAX_VALUE))
         );
 
@@ -227,7 +232,7 @@ public class UICadastroCliente extends javax.swing.JFrame {
                 .add(jLabel13)
                 .add(26, 26, 26)
                 .add(txtEstadosalvado, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
@@ -285,6 +290,20 @@ public class UICadastroCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtendereçoActionPerformed
 
+    private void botaodelimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaodelimparActionPerformed
+                this.nome = "";
+        this.cpf = "";
+        this.endereço = "";
+        this.cidade = "";
+        this.estado = "";
+        
+        txtNomesalvado.setText("");
+        txtCpfsalvado.setText(this.cpf);
+        txtEndereçosalvado.setText(this.endereço);
+        txtCidadesalvado.setText(this.cidade);
+        txtEstadosalvado.setText(this.estado);
+    }//GEN-LAST:event_botaodelimparActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -326,8 +345,8 @@ public class UICadastroCliente extends javax.swing.JFrame {
     private javax.swing.JTextField Txtendereço;
     private javax.swing.JTextField Txtestado;
     private javax.swing.JTextField Txtnome;
+    private javax.swing.JButton botaodelimpar;
     private javax.swing.JButton botaodesalvar;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

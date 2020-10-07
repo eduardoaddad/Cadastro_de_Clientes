@@ -1,2 +1,2 @@
 # Cadastro de Clientes
-Programa feito na faculdade 
+* A integração com banco de dados será adicionado no futuro. 
